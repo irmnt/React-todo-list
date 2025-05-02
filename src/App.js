@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
 
 function App() {
   return (
@@ -17,8 +18,25 @@ function App() {
         >
           Learn React
         </a>
+        <MyButton />
+        <MyButton />
+        <MyButton />
       </header>
     </div>
+  );
+}
+
+function MyButton() {
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
+  return (
+    <button onClick={handleClick}>
+      Clicked {count} times
+    </button>
   );
 }
 
