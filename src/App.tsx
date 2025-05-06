@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import TodoForm from './components/TodoForm';
-import TodoList from './components/TodoList';
+import TodoForm from './components/TodoForm.tsx';
+import TodoList from './components/TodoList.tsx';
 import { Todo } from './types';
 import React from 'react';
 
@@ -27,8 +27,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h1>📝 To-Do List (with TypeScript)</h1>
+    <div className='container mt-3'>
+      <h1 className='mb-4'>📝 To-Do List 📝</h1>
       <TodoForm onAdd={addTodo} />
       <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
     </div>

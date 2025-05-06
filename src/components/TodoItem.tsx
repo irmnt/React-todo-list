@@ -9,14 +9,15 @@ interface TodoItemProps {
 
 const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => {
     return (
-        <li className={`todo-item ${todo.done ? 'done' : ''}`}>
+        <li className='list-group-item'>
             <input
+                className='form-check-input me-2'
                 type="checkbox"
                 checked={todo.done}
                 onChange={() => onToggle(todo.id)}
             />
-            <span>{todo.text}</span>
-            <button onClick={() => onDelete(todo.id)}>Delete</button>
+            <span className='ms-2 me-2'><strong>{todo.text}</strong></span>
+            <button className='btn btn-danger btn-sm' onClick={() => onDelete(todo.id)}>Delete</button>
         </li>
     );
 };

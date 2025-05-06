@@ -17,12 +17,19 @@ const TodoForm = ({ onAdd }: TodoFormProps) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        placeholder="Add a task..."
-      />
-      <button type="submit">Add</button>
+      <div className='md-3 mb-3 row'>
+        <div className="col-sm-5">
+          <input
+            value={text}
+            onChange={(e) => setText(e.target.value)}
+            placeholder="Add a task..."
+            className='form-control form-control-sm'
+          />
+        </div>
+        <div className="col-sm-2">
+          <button type="submit" className="btn btn-outline-secondary btn-sm">Add</button>
+        </div>
+      </div>
     </form>
   );
 };
