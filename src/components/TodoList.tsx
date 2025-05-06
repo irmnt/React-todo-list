@@ -1,4 +1,4 @@
-import TodoItem from './TodoItem.tsx';
+import TodoItem from './TodoItem';
 import { Todo } from '../types';
 import React from 'react';
 
