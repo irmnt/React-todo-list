@@ -10,7 +10,11 @@ const TodoForm = ({ onAdd }: TodoFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Prevent adding empty todos
     if (!text.trim()) return;
+
+    // Add on lists and clear input field
     onAdd(text);
     setText('');
   };
