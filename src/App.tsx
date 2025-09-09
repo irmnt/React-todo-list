@@ -40,19 +40,11 @@ const App = () => {
 
   const subject = encodeURIComponent("📝 My Custom Todo List");
   const body = encodeURIComponent(
-    `Hello,\n\nHere is my current to-do list:\n\n${todoItems}\n\nBest regards,\nYour Todo App`
+    `Hello,\n\nHere is my current to-do list:\n\n${todoItems}\n\nCheers,\nYour Todo App`
   );
 
   window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
 };
-
-  const handleSendEmail = (e: React.FormEvent) => {
-    e.preventDefault();
-    sendEmailLink(email);
-    setShowModal(false);
-    setEmail('');
-  };
-
 
   return (
     <div className='container mt-3'>
