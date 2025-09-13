@@ -36,7 +36,7 @@ const App = () => {
 
   // Send email with todo list
   const sendEmailLink = (email: string) => {
-  const todoItems = todos.map((todo, index) => `${todo.done ? "✔" : "☐"} ${todo.text}`);
+  const todoItems = todos.map((todo) => `${todo.done ? "✔" : "☐"} ${todo.text}`).join('\n');
 
   const subject = encodeURIComponent("📝 My Custom Todo List");
   const body = encodeURIComponent(
